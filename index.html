@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Github Recreation</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+
+    <div class="container">
+      <div id='app'>
+
+        <div class="header row col-sm-12">
+
+          <div class="col-sm-7 col-sm-offset-1">
+            <img class="logo" src="images/GitHub-Mark-32px.png" alt="">
+            <input class="search-bar" type="text" placeholder="Search GitHub">
+            <span class="pull">Pull requests</span>
+            <span class="issues">Issues</span>
+            <span class="gist">Gist</span>
+          </div>
+
+          <div class="col-sm-2 col-sm-offset-2">
+            <div class="right glyphicon glyphicon-plus"><span class="caret"></span></div>
+            <img class="profile-sm" src="images/profile-sm.jpeg" alt=""><span class="caret"></span>
+          </div>
+
+        </div>
+
+        <aside class="col-sm-3 aside">
+
+          <div class="profile-container">
+          </div>
+
+          <div class="org-container">
+          </div>
+
+        </aside>
+
+        <section class="row col-sm-9">
+
+          <ul id="repo-header">
+            <li class="hvr">Overview</li>
+            <li class="hvr repositories">Repositories <span class="repository-number"></span></li>
+            <li class="hvr">Stars <span class="num">1</span></li>
+            <li class="hvr">Followers <span class="followers-num"></span></li>
+            <li class="hvr">Following <span class="following-num"></span></li>
+          </ul>
+
+          <div class="bottom-header">
+
+            <input class="search-repos" type="text" name="name" placeholder="Search repositories">
+            <div class="buttons" role="group">
+              <button type="button" class="btn btn-default header-button">
+                <span class="lighter">Type: </span><span class="bold">All</span><span class="caret"></span></button>
+
+              <button type="button" class="btn btn-default header-button-two">
+                <span class="lighter">Language: </span><span class="bold">All</span><span class="caret"></span></button>
+                <button type="button" class="btn btn-default bold white"><span class="glyphicon glyphicon-book "></span> New</button>
+            </div>
+
+          </div>
+
+          <ul id='repo-list' class="row">
+          </ul>
+
+        </section>
+
+        <footer class="col-sm-12 row">
+         <div class="left-footer">
+           <span class="ft copyright">© 2016 GitHub, Inc.</span>
+           <a class="ft" href="https://github.com/site/terms">Terms</a>
+           <a class="ft" href="https://github.com/site/privacy">Privacy</a>
+           <a class="ft" href="https://github.com/security">Security</a>
+           <a class="ft" href="https://status.github.com/">Status</a>
+           <a class="ft" href="https://help.github.com/">Help</a>
+         </div>
+         <div class="footer-icon">
+           <img class="icon-footer" src="images/GitHub-Mark-32px.png" alt="">
+         </div>
+         <div class="right-footer">
+           <a class="ft" href="https://github.com/contact">Contact GitHub</a>
+           <a class="ft" href="https://developer.github.com/">Api</a>
+           <a class="ft" href="https://training.github.com/">Training</a>
+           <a class="ft" href="https://shop.github.com/">Shop</a>
+           <a class="ft" href="https://github.com/blog">Blog</a>
+           <a class="ft" href="https://github.com/about">About</a>
+         </div>
+       </footer>
+
+      </div>
+    </div>
+
+
+    <!-- handlebars templates -->
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li class="col-sm-12 repo-item">
+        <div class="col-sm-6"><a href="{{html_url}}"><span class="repo-name col-sm-12">{{name}}</span></a><span class="description col-sm-12">{{description}}</span></div>
+        <div class="col-sm-2 line"></div>
+        <span class="language col-sm-2">{{language}}</span>
+        <span class="stargazers col-sm-2"><span class=" glyphicon glyphicon-star"></span> {{stargazers_count}}</span>
+      </li>
+    </script>
+
+    <script id='org-template' type="text/x-handlebars-template">
+      <span class="np organization col-sm-12"><p>Organizations</p></span>
+      <a href={{url}}><img class="org-logo" src={{avatar_url}} alt={{description}}/></a>
+    </script>
+
+    <script id="aside-template" type="text/x-handlebars-template">
+      <img class="col-sm-12 profile-lg" src={{avatar_url}} alt=""/>
+      <span class="np name col-sm-12">{{name}}</span>
+      <span class="np username col-sm-12">{{login}}</span>
+      <span class="np bio col-sm-12">Add a bio</span>
+      <div class="np col-sm-12"><button type="button" class="edit-profile btn btn-default">Edit Profile</button></div>
+      <div class='under'>
+        <span class="np location col-sm-12"><span class="glyphicon glyphicon-map-marker "></span> {{location}}</span>
+        <span class="np email col-sm-12"><span class="glyphicon glyphicon-envelope"></span> <a href="">{{email}}</a></span>
+        <span class="np created-at col-sm-12"><span class="glyphicon glyphicon-time"></span> Joined on Aug 31, 2016</span>
+      </div>
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
