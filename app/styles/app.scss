@@ -14,13 +14,32 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 ul {
   list-style: none;
+  padding: 0px;
+  .repo-item {
+    padding: 0px;
+    div {
+      padding: 0pc;
+    }
+  }
 }
 
+.contain {
+  min-width: 1250px;
+}
 //header
+.header {
+  // background-color: grey;
+  padding: 10px 0;
+
+  .search-bar {
+    width: 350px;
+    display: inline-block;
+  }
+}
+
 .profile-sm {
   width: 30px;
 }
-
 
 //aside
 
@@ -31,7 +50,30 @@ ul {
 #repo-header {
   li {
     display: inline-block;
+    padding: 20px;
   }
+}
+.bottom-header {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 15px 0;
+  .new {
+    // margin-left: 24px;
+  }
+  .buttons {
+    display: inline-block;
+  }
+
+  .search-repos {
+    width: 350px;
+    display: inline-block;
+    margin-right: 24px;
+  }
+  // @media (max-width:991px) {
+  //   .search-repos {
+  //     width: 150px;
+  //   }
+  // }
 }
 
 
