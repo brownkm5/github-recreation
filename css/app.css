@@ -5764,14 +5764,41 @@ button.close {
   box-sizing: border-box; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0px; }
+  ul .repo-item {
+    padding: 0px; }
+    ul .repo-item div {
+      padding: 0pc; }
+
+.contain {
+  min-width: 1250px; }
+
+.header {
+  padding: 10px 0; }
+  .header .search-bar {
+    width: 350px;
+    display: inline-block; }
 
 .profile-sm {
   width: 30px; }
 
 #repo-header li {
-  display: inline-block; }
+  display: inline-block;
+  padding: 20px; }
+
+.bottom-header {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 15px 0; }
+  .bottom-header .buttons {
+    display: inline-block; }
+  .bottom-header .search-repos {
+    width: 350px;
+    display: inline-block;
+    margin-right: 24px; }
 
 .left-footer, .footer-icon, .right-footer {
   display: inline-block; }
+
 /*# sourceMappingURL=app.css.map */
