@@ -6,6 +6,7 @@
     <title>Github Recreation</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
+  <script src="https://use.fontawesome.com/25317792ff.js"></script>
   <body>
 
 
@@ -32,10 +33,10 @@
         <div class="container">
           <aside class="col-xs-3 aside">
 
-            <div class="profile-container">
+            <div class="profile-container col-xs-12">
             </div>
 
-            <div class="org-container">
+            <div class="org-container col-xs-12">
             </div>
 
           </aside>
@@ -69,6 +70,9 @@
 
           </section>
 
+        </div>
+
+        <div class="container site-footer-container">
           <footer class="col-xs-12 row">
            <div class="left-footer">
              <span class="ft copyright">© 2016 GitHub, Inc.</span>
@@ -89,7 +93,7 @@
              <a class="ft" href="https://github.com/blog">Blog</a>
              <a class="ft" href="https://github.com/about">About</a>
            </div>
-                 </footer>
+         </footer>
         </div>
 
       </div>
@@ -100,7 +104,7 @@
 
     <script id="repo-template" type="text/x-handlebars-template">
       <li class="col-xs-12 repo-item">
-        <div class="col-xs-6"><a href="{{html_url}}"><span class="repo-name col-xs-12">{{name}}</span></a><span class="description col-sm-12">{{description}}</span></div>
+        <div class="col-xs-6"><a href="{{html_url}}"><h3 class="repo-name col-xs-12">{{name}}</h3></a><span class="description col-sm-12">{{description}}</span></div>
         <div class="col-xs-2 line"></div>
         <span class="language col-xs-2">{{language}}</span>
         <span class="stargazers col-xs-2"><span class=" glyphicon glyphicon-star"></span> {{stargazers_count}}</span>
@@ -108,20 +112,22 @@
     </script>
 
     <script id='org-template' type="text/x-handlebars-template">
-      <span class="np organization col-xs-12"><p>Organizations</p></span>
-      <a href={{url}}><img class="org-logo" src={{avatar_url}} alt={{description}}/></a>
+      <span class="np organization"><p>Organizations</p></span>
+      <a href={{html_url}} class="logo-container"><img class="org-logo" src={{avatar_url}} alt={{description}}/></a>
     </script>
 
     <script id="aside-template" type="text/x-handlebars-template">
-      <img class="col-xs-12 profile-lg" src={{avatar_url}} alt=""/>
-      <span class="np name col-xs-12">{{name}}</span>
-      <span class="np username col-xs-12">{{login}}</span>
-      <span class="np bio col-xs-12">Add a bio</span>
-      <div class="np col-xs-12"><button type="button" class="edit-profile btn btn-default">Edit Profile</button></div>
-      <div class='under'>
-        <span class="np location col-xs-12"><span class="glyphicon glyphicon-map-marker "></span> {{location}}</span>
-        <span class="np email col-xs-12"><span class="glyphicon glyphicon-envelope"></span> <a href="">{{email}}</a></span>
-        <span class="np created-at col-xs-12"><span class="glyphicon glyphicon-time"></span> Joined on Aug 31, 2016</span>
+      <div class="profile-lg">
+        <img class="" src={{avatar_url}} alt=""/>
+      </div>
+      <p class="np name">{{name}}</p>
+      <p class="np username">{{login}}</p>
+      <p class="np bio">{{bio}}</p>
+      <div class='info'>
+        <p class="np location"><span class="glyphicon glyphicon-map-marker "></span> {{location}}</p>
+        <p class="np email"><span class="glyphicon glyphicon-envelope"></span> <a href="">{{email}}</a></p>
+        <p class='website'><i class="fa fa-link" aria-hidden="true"></i> <a href=http://www.{{blog}}> {{blog}}</a></p>
+        <p class="np created-at"><span class="glyphicon glyphicon-time"></span> Joined on Aug 31, 2016</p>
       </div>
     </script>
 

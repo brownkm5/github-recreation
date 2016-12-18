@@ -10,7 +10,7 @@ $.ajax('https://api.github.com/users/brownkm5/repos').then(displayUserRepo);
 
 function displayUserRepo(data){
   //console.log(data);
-  var repos = data;
+  var repos = data.reverse();
   var $repoContainer = $('#repo-list'); //ul that holds the list of repos
 
   var source = $('#repo-template').html();
@@ -23,14 +23,19 @@ function displayUserRepo(data){
 //inserts the organization info into the aside
 function displayOrgs(data){
   var orgs = data;
+  // console.log(data);
   _.each(orgs, function(org){
-    var org = org;
-    var $orgContainer = $('.org-container');
+    var url = org.url;
+    $.ajax(url).then(function(data){
+      var org = data;
+      var $orgContainer = $('.org-container');
 
-    var source = $('#org-template').html();
-    var template = Handlebars.compile(source);
+      var source = $('#org-template').html();
+      var template = Handlebars.compile(source);
 
-    $orgContainer.append(template(org));
+      $orgContainer.append(template(org));
+    })
+
   })
 };
 
