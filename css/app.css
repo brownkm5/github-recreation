@@ -5763,13 +5763,20 @@ button.close {
 *::after {
   box-sizing: border-box; }
 
+@media (max-width: 1250px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px; } }
 ul {
   list-style: none;
-  padding: 0px; }
+  padding-left: 15px; }
   ul .repo-item {
     padding: 0px; }
     ul .repo-item div {
-      padding: 0pc; }
+      padding: 0px; }
+      ul .repo-item div h3, ul .repo-item div span {
+        padding: 0px; }
 
 .contain {
   min-width: 1250px; }
@@ -5783,6 +5790,50 @@ ul {
 .profile-sm {
   width: 30px; }
 
+.profile-lg img {
+  width: 100%;
+  border-radius: 6px; }
+
+.name {
+  margin-top: 16px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px; }
+
+.username {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666; }
+
+.bio {
+  font-size: 14px;
+  color: #767676;
+  margin-bottom: 12px; }
+
+.info {
+  border-top: 1px #e5e5e5 solid;
+  border-bottom: 1px #e5e5e5 solid;
+  padding: 16px 0; }
+  .info p {
+    margin-bottom: 5px; }
+  .info .created-at {
+    margin-bottom: 0px; }
+
+.org-container {
+  margin-top: 17px; }
+  .org-container .organization {
+    font-weight: 600;
+    font-size: 16px; }
+  .org-container .logo-container {
+    height: 35px;
+    margin-bottom: 3px; }
+  .org-container .org-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 3px; }
+
 #repo-header li {
   display: inline-block;
   padding: 20px; }
@@ -5791,14 +5842,37 @@ ul {
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   padding: 15px 0; }
+  .bottom-header .new {
+    margin-left: 24px; }
   .bottom-header .buttons {
     display: inline-block; }
   .bottom-header .search-repos {
     width: 350px;
     display: inline-block;
-    margin-right: 24px; }
+    margin-right: 15%; }
+
+#repo-list .repo-item {
+  border-bottom: 1px solid #eeeeee;
+  vertical-align: middle;
+  padding-top: 25px;
+  padding-bottom: 30px; }
+#repo-list h3 {
+  font-size: 20px;
+  font-weight: 600; }
+#repo-list .language, #repo-list .stargazers {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.site-footer-container {
+  width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
 
 .left-footer, .footer-icon, .right-footer {
   display: inline-block; }
+
+.footer-icon {
+  margin: 0 11%; }
 
 /*# sourceMappingURL=app.css.map */
