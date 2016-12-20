@@ -23,9 +23,11 @@
             <span class="gist">Gist</span>
           </div>
 
-          <div class="col-xs-2 col-xs-offset-2">
+          <div class="right-header col-xs-2 col-xs-offset-2">
             <div class="right glyphicon glyphicon-plus"><span class="caret"></span></div>
-            <img class="profile-sm" src="images/profile-sm.jpeg" alt=""><span class="caret"></span>
+            <div class="profile-small">
+              <img class="profile-sm" src="images/profile-sm.jpeg" alt=""><span class="caret"></span>
+            </div>
           </div>
 
         </div>
@@ -45,8 +47,8 @@
 
             <ul id="repo-header">
               <li class="hvr">Overview</li>
-              <li class="hvr repositories">Repositories <span class="repository-number"></span></li>
-              <li class="hvr">Stars <span class="num">1</span></li>
+              <li class="hvr repositories">Repositories <span class="repository-num"></span></li>
+              <li class="hvr">Stars <span class="star-num">1</span></li>
               <li class="hvr">Followers <span class="followers-num"></span></li>
               <li class="hvr">Following <span class="following-num"></span></li>
             </ul>
@@ -55,12 +57,14 @@
 
               <input class="search-repos form-control" type="text" name="name" placeholder="Search repositories">
               <div class="buttons" role="group">
-                <button type="button" class="btn btn-default type">
-                  <span class="lighter">Type: </span><span class="bold">All</span><span class="caret"></span></button>
+                <button type="button" class="btn select-menu-button type">
+                  <span class="lighter">Type: </span><span class="bold">All</span> <span class="caret"></span>
+                </button>
 
-                <button type="button" class="btn btn-default language">
-                  <span class="lighter">Language: </span><span class="bold">All</span><span class="caret"></span></button>
-                  <button type="button" class="btn btn-default bold white new"><span class="glyphicon glyphicon-book "></span> New</button>
+                <button type="button" class="btn select-menu-button language">
+                  <span class="lighter">Language: </span><span class="bold">All</span> <span class="caret"></span>
+                </button>
+                <button type="button" class="btn btn-default bold white new"><span class="glyphicon glyphicon-book "></span> New</button>
               </div>
 
             </div>
@@ -73,7 +77,7 @@
         </div>
 
         <div class="container site-footer-container">
-          <footer class="col-xs-12 row">
+          <footer class="col-xs-12 row site-footer">
            <div class="left-footer">
              <span class="ft copyright">© 2016 GitHub, Inc.</span>
              <a class="ft" href="https://github.com/site/terms">Terms</a>
@@ -118,7 +122,7 @@
 
     <script id="aside-template" type="text/x-handlebars-template">
       <div class="profile-lg">
-        <img class="" src={{avatar_url}} alt=""/>
+        <img class="avatar" src={{avatar_url}} alt=""/>
       </div>
       <p class="np name">{{name}}</p>
       <p class="np username">{{login}}</p>

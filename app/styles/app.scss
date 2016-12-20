@@ -44,11 +44,36 @@ ul {
   .search-bar {
     width: 350px;
     display: inline-block;
+    margin-right: 15px;
+  }
+  .pull, .issues, .gist {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333;
+  }
+  .pull:hover, .issues:hover, .gist:hover {
+    color: #4078c0;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
-
+.right-header {
+  margin-top: 5px;
+}
+.profile-small {
+  display: inline-block;
+  margin-left: 15px;
+}
+.profile-small:hover, .right:hover {
+  color: #4078c0;
+  cursor: pointer;
+}
 .profile-sm {
-  width: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
 }
 
 //aside
@@ -57,6 +82,7 @@ ul {
   img {
     width: 100%;
     border-radius: 6px;
+    cursor: pointer;
   }
 }
 .name {
@@ -108,9 +134,35 @@ ul {
 
 //repo container
 #repo-header {
+  margin-bottom: 0px;
   li {
     display: inline-block;
     padding: 20px;
+    // display: table-cell;
+    // padding-right: 20px;
+    // padding-left: 20px;
+    font-size: 14px;
+    color: #767676;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  li:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  .repositories {
+    color: #333;
+    border-bottom: 1px #c9510c solid;
+  }
+  .repository-num, .star-num, .followers-num, .following-num {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #666;
+    background-color: #eee;
+    border-radius: 20px;
   }
 }
 .bottom-header {
@@ -122,12 +174,45 @@ ul {
   }
   .buttons {
     display: inline-block;
+    height: 35px;
+
+    .lighter {
+      font-style: normal;
+      font-weight: 500;
+      opacity: 0.6;
+    }
+    button {
+      height: 34px;
+    }
+    .select-menu-button {
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: #eee;
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      background-image: linear-gradient(#fcfcfc, #eee);
+    }
+    .select-menu-button:hover {
+      text-decoration: none;
+      background-color: #ddd;
+      background-image: linear-gradient(#eee, #ddd);
+      border-color: #ccc;
+    }
+    .new {
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+      background-color: #6cc644;
+      background-image: -webkit-linear-gradient(#91dd70, #55ae2e);
+      background-image: linear-gradient(#91dd70, #55ae2e);
+      border: 1px solid #5aad35;
+    }
   }
 
   .search-repos {
-    width: 350px;
+    width: 450px;
     display: inline-block;
-    margin-right: 15%;
+    margin-right: 3%;
   }
   // @media (max-width:991px) {
   //   .search-repos {
@@ -151,19 +236,46 @@ ul {
     margin-top: 20px;
     margin-bottom: 10px;
   }
+  .description, .language {
+    color: #767676;
+  }
 }
 
 
 //footer
 .site-footer-container {
-  width: 950px;
+  width: 1070px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  .col-xs-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  a {
+    margin-left: 10px;
+    color: #4078c0;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  .site-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
 .left-footer, .footer-icon, .right-footer {
   display: inline-block;
 }
 .footer-icon {
-  margin: 0 11%;
+  margin: 0 16.6%;
 }

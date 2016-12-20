@@ -50,7 +50,7 @@ function displayUserInfo(data){
 
   $profileContainer.append(template(user));
 
-  $('.repository-number').append(data.public_repos);
+  $('.repository-num').append(data.public_repos);
   $('.followers-num').append(data.followers);
   $('.following-num').append(data.following);
 };
