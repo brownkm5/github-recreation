@@ -5783,6 +5783,8 @@ ul {
 
 .header {
   padding: 10px 0; }
+  .header .logo {
+    margin-right: 10px; }
   .header .search-bar {
     width: 350px;
     display: inline-block;
@@ -5800,6 +5802,9 @@ ul {
 
 .right-header {
   margin-top: 5px; }
+  .right-header .fa {
+    font-size: 20px;
+    vertical-align: bottom; }
 
 .profile-small {
   display: inline-block;
@@ -5845,6 +5850,8 @@ ul {
     margin-bottom: 5px; }
   .info .created-at {
     margin-bottom: 0px; }
+  .info .fa {
+    font-size: 15px; }
 
 .org-container {
   margin-top: 17px; }
