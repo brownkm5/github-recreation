@@ -53,7 +53,7 @@ function displayUserInfo(data){
   $('.repository-num').append(data.public_repos);
   $('.followers-num').append(data.followers);
   $('.following-num').append(data.following);
+  $('.profile-sm').attr('src', data.avatar_url);
 };
-
 
 }());

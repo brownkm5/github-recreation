@@ -18,15 +18,15 @@
           <div class="col-xs-7 col-xs-offset-1">
             <img class="logo" src="images/GitHub-Mark-32px.png" alt="">
             <input class="search-bar form-control" type="text" placeholder="Search GitHub">
-            <span class="pull">Pull requests</span>
-            <span class="issues">Issues</span>
-            <span class="gist">Gist</span>
+            <a href='https://github.com/pulls' class="pull">Pull requests</a>
+            <a href="https://github.com/issues" class="issues">Issues</a>
+            <a href="https://gist.github.com/" class="gist">Gist</a>
           </div>
 
           <div class="right-header col-xs-2 col-xs-offset-2">
             <div class="right glyphicon glyphicon-plus"><span class="caret"></span></div>
             <div class="profile-small">
-              <img class="profile-sm" src="images/profile-sm.jpeg" alt=""><span class="caret"></span>
+              <img class="profile-sm" alt=""><span class="caret"></span>
             </div>
           </div>
 
@@ -39,6 +39,7 @@
             </div>
 
             <div class="org-container col-xs-12">
+              <span class="np organization"><p>Organizations</p></span>
             </div>
 
           </aside>
@@ -109,20 +110,19 @@
     <script id="repo-template" type="text/x-handlebars-template">
       <li class="col-xs-12 repo-item">
         <div class="col-xs-6"><a href="{{html_url}}"><h3 class="repo-name col-xs-12">{{name}}</h3></a><span class="description col-sm-12">{{description}}</span></div>
-        <div class="col-xs-2 line"></div>
-        <span class="language col-xs-2">{{language}}</span>
-        <span class="stargazers col-xs-2"><span class=" glyphicon glyphicon-star"></span> {{stargazers_count}}</span>
+        <span class="language col-xs-offset-2 col-xs-2">{{language}}</span>
+        <div class="stargazers col-xs-2"><span class="glyphicon glyphicon-star"></span> {{stargazers_count}}</div>
       </li>
     </script>
 
     <script id='org-template' type="text/x-handlebars-template">
-      <span class="np organization"><p>Organizations</p></span>
+
       <a href={{html_url}} class="logo-container"><img class="org-logo" src={{avatar_url}} alt={{description}}/></a>
     </script>
 
     <script id="aside-template" type="text/x-handlebars-template">
       <div class="profile-lg">
-        <img class="avatar" src={{avatar_url}} alt=""/>
+        <a href="https://github.com/account"><img class="avatar" src={{avatar_url}} alt=""/></a>
       </div>
       <p class="np name">{{name}}</p>
       <p class="np username">{{login}}</p>

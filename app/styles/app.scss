@@ -233,11 +233,15 @@ ul {
     font-weight: 600;
   }
   .language, .stargazers {
-    margin-top: 20px;
+    margin-top: 24px;
     margin-bottom: 10px;
   }
   .description, .language {
     color: #767676;
+  }
+  .stargazers:hover {
+    cursor: pointer;
+    color: #337ab7;
   }
 }
 
